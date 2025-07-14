@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MotorMojo</title>
+  <title>Pi-CADS</title>
   <!-- Bootstrap 5.3 CDN -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -19,7 +19,7 @@
     <div class="container-fluid">
       <!-- Brand Logo -->
       <a class="navbar-brand brand-logo" href="#home">
-        <img src="assets/images/picadsLogo-cropped.svg" alt="PiCADS" class="d-inline-block align-text-top" />
+        <img src="assets/images/picadsLogo-cropped.svg" alt="Pi-CADS" class="d-inline-block align-text-top" />
       </a>
 
       <!-- Offcanvas Toggler -->
@@ -44,7 +44,7 @@
         <div class="offcanvas-header">
           <!-- Brand Logo -->
           <a class="navbar-brand brand-logo" href="#home">
-            <img src="assets/images/MotorMojoLogo.svg" alt="MotorMojo" class="d-inline-block align-text-top" />
+            <img src="assets/images/picadsLogo-cropped.svg" alt="Pi-CADS" class="d-inline-block align-text-top" />
           </a>
           <button
             type="button"
@@ -93,8 +93,8 @@
           </ul>
           <!-- Buttons -->
           <div class="d-flex mt-3 mt-lg-0 auth-buttons">
-            <button id="signin-btn" onclick="window.location.href='https://admin.mojomotor.in/realms/keycloack_local/protocol/openid-connect/auth?client_id=keycloak_client_local&redirect_uri=https%3A%2F%2Fprod.mojomotor.in&response_type=code&scope=openid'" class="btn btn-outline-primary btn-signin me-2">Sign In</button>
-            <button id="signup-btn" onclick="window.location.href='https://admin.mojomotor.in/realms/keycloack_local/protocol/openid-connect/registrations?client_id=keycloak_client_local&redirect_uri=https%3A%2F%2Fprod.mojomotor.in&response_type=code&scope=openid'" class="btn btn-primary btn-signup">Sign Up</button>
+            <button id="signin-btn" onclick="window.location.href='https://auth.picads.in:9443/realms/keycloack_local/protocol/openid-connect/auth?client_id=keycloak_client_local&redirect_uri=https%3A%2F%2Ftest.picads.in%3A444%2F&state=8847e665-5849-4fd8-b314-b010a2e13955&response_mode=fragment&response_type=code&scope=openid&nonce=f0a7e446-1edc-4e0a-b097-bfe795149e9f&code_challenge=gav5ZxHPBTmkLelRpara-3nXz8PtgjLyXnn_NO1x2F4&code_challenge_method=S256'" class="btn btn-outline-primary btn-signin me-2">Sign In</button>
+            <button id="signup-btn" onclick="window.location.href='https://auth.picads.in:9443/realms/keycloack_local/login-actions/registration?client_id=keycloak_client_local&tab_id=bt8WiTLgGd4&client_data=eyJydSI6Imh0dHBzOi8vdGVzdC5waWNhZHMuaW46NDQ0LyIsInJ0IjoiY29kZSIsInJtIjoiZnJhZ21lbnQiLCJzdCI6Ijg4NDdlNjY1LTU4NDktNGZkOC1iMzE0LWIwMTBhMmUxMzk1NSJ9'" class="btn btn-primary btn-signup">Sign Up</button>
           </div>
         </div>
       </div>
@@ -116,10 +116,10 @@
           <p>Custom Motors for Every Use!</p>
         </div>
         <div class="hero-image">
-            <img src="assets/images/laptop.svg" alt="Laptop with MotorMojo Software">
+            <img src="assets/images/laptop.svg" alt="Laptop with Pi-CADS Software">
         </div>
         <div class="hero-button">
-          <button onclick="window.location.href='https://admin.mojomotor.in/realms/keycloack_local/protocol/openid-connect/auth?client_id=keycloak_client_local&redirect_uri=https%3A%2F%2Fprod.mojomotor.in&response_type=code&scope=openid'" class="cta-button">Lets Get Started</button>
+          <button onclick="window.location.href='https://auth.picads.in:9443/realms/keycloack_local/protocol/openid-connect/auth?client_id=keycloak_client_local&redirect_uri=https%3A%2F%2Ftest.picads.in%3A444%2F&state=8847e665-5849-4fd8-b314-b010a2e13955&response_mode=fragment&response_type=code&scope=openid&nonce=f0a7e446-1edc-4e0a-b097-bfe795149e9f&code_challenge=gav5ZxHPBTmkLelRpara-3nXz8PtgjLyXnn_NO1x2F4&code_challenge_method=S256'" class="cta-button">Lets Get Started</button>
         </div>
     </div>
   </section>
@@ -305,7 +305,7 @@
   <!-- Footer -->
   <footer id="footer">
     <div class="footer-left">
-        <img src="assets/images/picadsLogo-cropped.svg" alt="MotorMojo Logo">
+        <img src="assets/images/picadsLogo-cropped.svg" alt="Pi-CADS Logo">
         <p>&copy; 2025 Pilabz. All rights reserved.</p>
     </div>
     <div class="footer-right">
