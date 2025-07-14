@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotorMojo</title>
+  <!-- Bootstrap 5.3 CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="assets/images/favicon.svg" /> 
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom">
+    <div class="container-fluid">
+      <!-- Brand Logo -->
+      <a class="navbar-brand brand-logo" href="#home">
+        <img src="assets/images/picadsLogo-cropped.svg" alt="PiCADS" class="d-inline-block align-text-top" />
+      </a>
+
+      <!-- Offcanvas Toggler -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Offcanvas Sidebar -->
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <!-- Brand Logo -->
+          <a class="navbar-brand brand-logo" href="#home">
+            <img src="assets/images/MotorMojoLogo.svg" alt="MotorMojo" class="d-inline-block align-text-top" />
+          </a>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- Navigation Links -->
+          <ul class="navbar-nav justify-content-start flex-grow-1">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home" id="home-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#overview" id="overview-link">Overview</a>
+            </li>
+            <!-- Docs Dropdown -->
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="docsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Help Resources
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="docsDropdown">
+              <li><a class="dropdown-item d-flex justify-content-between align-items-center" id="overviewpdf">Overview <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+              </svg></a></li>
+              <li><a class="dropdown-item d-flex justify-content-between align-items-center" id="Vehiclepdf">Vehicle Dynamics <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+              </svg></a></li>
+              <li><a class="dropdown-item d-flex justify-content-between align-items-center" id="Motorpdf">Motor Wiz <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+              </svg></a></li>
+              <li><a class="dropdown-item d-flex justify-content-between align-items-center" id="OtherFeatures">Other Features <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+              </svg></a></li>
+            </ul>
+            </li> -->
+      </ul>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#contact" id="contact-link">Contact Us</a>
+            </li> -->
+          </ul>
+          <!-- Buttons -->
+          <div class="d-flex mt-3 mt-lg-0 auth-buttons">
+            <button id="signin-btn" onclick="window.location.href='https://admin.mojomotor.in/realms/keycloack_local/protocol/openid-connect/auth?client_id=keycloak_client_local&redirect_uri=https%3A%2F%2Fprod.mojomotor.in&response_type=code&scope=openid'" class="btn btn-outline-primary btn-signin me-2">Sign In</button>
+            <button id="signup-btn" onclick="window.location.href='https://admin.mojomotor.in/realms/keycloack_local/protocol/openid-connect/registrations?client_id=keycloak_client_local&redirect_uri=https%3A%2F%2Fprod.mojomotor.in&response_type=code&scope=openid'" class="btn btn-primary btn-signup">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" >
+    <!-- <div class="info-note">
+      <p><strong>Note: </strong>The online servers will ONLY be available from <strong>8:30 AM to 10:00 PM IST</strong> daily. 
+      Please make sure that you log in during these hours. Thank you!!</p>
+    </div> -->
+    <div class="hero">
+        <!-- <img class="herovectorBackground3" src="assets/images/Vectorbgd3.svg" alt="">
+        <img class="herovectorBackground31" src="assets/images/Vectorbgd3.svg" alt="">
+        <img class="herovectorBackground4" src="assets/images/Vectorbackground4.svg" alt=""> -->
+        <div class="hero-content">
+          <h1>Your <span class="highlight">Specifications</span>,<br>Our <span class="highlight">Innovation</span></h1>
+          <p>Custom Motors for Every Use!</p>
+        </div>
+        <div class="hero-image">
+            <img src="assets/images/laptop.svg" alt="Laptop with MotorMojo Software">
+        </div>
+        <div class="hero-button">
+          <button onclick="window.location.href='https://admin.mojomotor.in/realms/keycloack_local/protocol/openid-connect/auth?client_id=keycloak_client_local&redirect_uri=https%3A%2F%2Fprod.mojomotor.in&response_type=code&scope=openid'" class="cta-button">Lets Get Started</button>
+        </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section id="overview" class="overview">
+    <h2 class="ovsection-title">Overview</h2>
+    <div class="overview-content">
+        <!-- <img class="Vectorbackground2" src="assets/images/Vectorbackground2.svg" alt="">
+        <img class="Vectorbackground3" src="assets/images/Vectorbackground2.svg" alt="">
+        <img class="vectorBackground1" src="assets/images/vectorBackground1.svg" alt=""> -->
+        <!-- Container 1: Content first -->
+         <div class="overview-para">
+          <p>Pi-CADS – Motor is a next-generation, cloud-based, SaaS platform for 2D axisymmetric motor design and simulation. Built for both EV and non-EV applications, it serves engineers, manufacturers, researchers, and enthusiasts across India and global markets. With a rich suite of tools, real-time feedback, and intuitive design interfaces, Pi-CADS empowers users to create, simulate, and optimize electric motors with unmatched ease and accuracy.</p>
+         </div>
+        <div class="ovcard card-one">
+          <div class="ovcard-title">
+              <!-- <h3 class="ovcard-title-sub">Customize Your EV <br> Motor for Any Vehicle</h3> -->
+              <div class="ovcard-keyword-container">
+                <img src="assets/images/vectorEVModule.svg" alt="Your Image">
+              </div>
+          </div>
+
+          <div class="ovcard-para">
+            <p>Design motors for the vehicle by inputting key specifications like battery voltage, wheel radius, and gross weight. Define performance parameters, such as acceleration, max speed, and performance on gradients. Customize the vehicle’s drive cycle interactively by adjusting points on a Speed vs. Time graph for precise control.</p>
+            <ul>
+              <li>Choose from topologies: IPMSM, SPMSM, or SynRM</li>
+              <li>Define geometry, materials, and simulation settings</li>
+              <li>Instantly access winding diagrams, flux plots, efficiency charts, and cost estimates</li>
+            </ul>
+            <ul class="custom-bullet">
+              <li>Vehicle + Motor Workflow</li>
+              <li>Interactive Drive Cycle Design</li>
+              <li>Real-Time Visual Outputs & Cost Estimation</li>
+            </ul>
+          </div>
+
+          <div class="ev-image">
+            <img src="assets/images/imgEVModule.svg" alt="EV Module Image">
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="nonEV" class="nonEV">
+    <div class="ovcard card-two">
+          <div>
+            <div class="ovcard-title">
+                <!-- <h3 class="ovcard-title-sub">Customize Your EV <br> Motor for Any Vehicle</h3> -->
+                <div class="ovcard-keyword-container">
+                  <img src="assets/images/vectorNonEVModule.svg" alt="Your Image">
+                </div>
+            </div>
+
+            <div class="ovcard-para">
+              <p>Need only a motor? Skip vehicle dynamics and head directly into motor design. Perfect for custom machinery, robotics, drones, or industrial applications. Input performance requirements like torque and speed, or define geometry directly:</p>
+              <ul>
+                <li>Choose topologies based on your needs</li>
+                <li>Customize geometry, slots, holes, and materials</li>
+                <li>Simulate and view performance outputs instantly</li>
+              </ul>
+              <ul class="custom-bullet">
+                <li>Motor-Only Workflow</li>
+                <li>Multiple Topologies (IPMSM, SPMSM, SynRM)</li>
+                <li>Ideal for Industrial & Custom Use Cases</li>
+                <li>Advanced Visualization & Analysis Tools</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="nonev-image">
+            <img src="assets/images/imgNonEVModule.svg" alt="EV Module Image">
+          </div>
+    </div>
+    <div class="ovcard card-three coreFeatures">
+        <div class="ovcard-title">
+            <!-- <h3 class="ovcard-title-sub">Customize Your EV <br> Motor for Any Vehicle</h3> -->
+            <div class="ovcard-keyword-container">
+              <img src="assets/images/vectorCoreFeatures.svg" alt="Your Image">
+            </div>
+        </div>
+
+        <div class="features-container">
+
+          <div class="feature-block">
+            <div class="feature-title">1. Intelligent Reporting & Collaboration</div>
+            <p class="feature-description">
+              Generate professional, shareable reports with all inputs, outputs, plots, and summaries.
+              Create and manage multiple motor designs per vehicle, and collaborate easily with peers.
+            </p>
+          </div>
+
+          <div class="feature-block">
+            <div class="feature-title">2. Visual Geometry Tools</div>
+            <p class="feature-description">
+              Edit and control motor design with interactive stator slot and rotor hole customization:
+            </p>
+            <ul class="feature-list">
+              <li class="feature-item">Topologies: IPMSM, SPMSM, SynRM</li>
+              <li class="feature-item">Visual parametric editing for high accuracy</li>
+            </ul>
+          </div>
+
+          <div class="feature-block">
+            <div class="feature-title">3. Built-in Material Library</div>
+            <p class="feature-description">Access a curated database of:</p>
+            <ul class="feature-list">
+              <li class="feature-item">Magnetic steels</li>
+              <li class="feature-item">Rare-earth magnets</li>
+              <li class="feature-item">Copper conductors</li>
+              <li class="feature-item">Insulation materials optimized for high-fidelity simulations</li>
+            </ul>
+          </div>
+
+          <div class="feature-block">
+            <div class="feature-title">4. Export-Ready Outputs</div>
+            <p class="feature-description">Download vital files post-simulation:</p>
+            <ul class="feature-list">
+              <li class="feature-item">DXF (Stator, Rotor, Full Geometry)</li>
+              <li class="feature-item">FEM &amp; .ans for FEMM</li>
+              <li class="feature-item">MTPA data in CSV for control integration</li>
+            </ul>
+          </div>
+
+        </div>
+    </div>
+  </section>
+
+  <section id="lastTab" class="lastTab">
+    <div class="ovcard card-four">
+        <div class="ovcard-title">
+            <!-- <h3 class="ovcard-title-sub">Customize Your EV <br> Motor for Any Vehicle</h3> -->
+            <div class="ovcard-keyword-container">
+              <img src="assets/images/vectorWhyPicads.svg" alt="Your Image">
+            </div>
+        </div>
+
+        <div class="ovcard-para">
+          <ul>
+            <li>Tailored Motor Design: Input use-case-specific parameters for customized results</li>
+            <li>Real-Time Computational Feedback: Instant torque, power, and speed insights</li>
+            <li>User-Friendly Interface: Intuitive, graphical tools with no code required</li>
+            <li>Automated Engineering & Business Outputs: Winding diagrams, flux plots, cost estimates</li>
+            <li>100% Cloud-Based: No installation required; work anytime, anywhere</li>
+          </ul>
+          <p>Built for Today’s Innovators From startups and educational institutions to seasoned professionals, Pi-CADS bridges the gap between conceptual motor design and manufacturing-readiness.</p>
+        </div>
+    </div>
+    <div class="ovcard card-five">
+        <div class="ovcard-title">
+            <!-- <h3 class="ovcard-title-sub">Customize Your EV <br> Motor for Any Vehicle</h3> -->
+            <div class="ovcard-keyword-container">
+              <img src="assets/images/vectorTarget.svg" alt="Your Image">
+            </div>
+        </div>
+
+        <div class="ovcard-para">
+          <ul>
+            <li>Engineers with no prior motor experience</li>
+            <li>Junior and senior motor design engineers</li>
+            <li>EV and non-EV startups</li>
+            <li>Educational and R&D institutions</li>
+            <li>Electrical engineers and maintenance teams</li>
+            <li>Motor manufacturers and sustainability advocates</li>
+          </ul>
+        </div>
+    </div>
+    <div class="ovcard card-six">
+        <div class="ovcard-title">
+            <!-- <h3 class="ovcard-title-sub">Customize Your EV <br> Motor for Any Vehicle</h3> -->
+            <div class="ovcard-keyword-container">
+              <img src="assets/images/vectorVisualize.svg" alt="Your Image">
+            </div>
+        </div>
+
+        <div class="ovcard-para">
+          <p>Design motors with intelligence and efficiency using Pi-CADS. Get started today—where precision meets possibility.</p>
+          <p>Get Started with Pi-CADS – Where Precision Meets Possibility.</p>
+        </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-left">
+        <img src="assets/images/picadsLogo-cropped.svg" alt="MotorMojo Logo">
+        <p>&copy; 2025 Pilabz. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Use</a> | 
+        <a href="#">Sitemap</a>
+        <!-- <p>Contact us at info@motormojo.com</p> -->
+    </div>
+  </footer>
+  <!-- Dummy Sections -->
+  <!-- <section id="home" style="height: 100vh; background-color: #f8f9fa;">
+    <h1 class="text-center">Home Section</h1>
+  </section> -->
+  <!-- <section id="overview" style="height: 100vh; background-color: #e9ecef;">
+    <h1 class="text-center">Overview Section</h1>
+  </section> -->
+  <!-- <section id="contact" style="height: 100vh; background-color: #dee2e6;">
+    <h1 class="text-center">Contact Section</h1>
+  </section> -->
+
+  <!-- Bootstrap JS Bundle -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>
